@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://depthend-gallery.vercel.app/sitemap.xml
