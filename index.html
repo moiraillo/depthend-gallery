@@ -242,7 +242,7 @@
     min-width: 100%; height: 100%;
     flex-shrink: 0;
   }
-  .slide img { width: 100%; height: 100%; object-fit: cover; display: block; max-height: 100%; }
+  .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .slider-dots {
     position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
     display: flex; gap: 8px; z-index: 10;
@@ -418,7 +418,9 @@
     div[style*="display:grid"] { grid-template-columns: 1fr !important; gap: 36px !important; }
     .hero { grid-template-columns: 1fr; }
     .hero-left { padding: 50px 24px; }
-    .hero-right { aspect-ratio: 16 / 9 !important; height: auto; }
+    .hero-right { aspect-ratio: 4 / 3 !important; height: auto; width: 100%; }
+    .slider-track { height: 100%; }
+    .slide { height: 100%; }
     .rooms-header { padding: 0 20px 40px; }
     .rooms-grid { grid-template-columns: 1fr; }
     .room-card { height: 400px; }
@@ -428,17 +430,18 @@
     .contact-strip { flex-direction: column; gap: 24px; align-items: flex-start; padding: 40px 20px; }
     footer { flex-direction: column; gap: 12px; padding: 24px 20px; }
     .amenity-grid { grid-template-columns: 1fr; }
-    .slider-track, .h1-track, .h2-track { height: 100%; }
-    .detail-img { aspect-ratio: 4/3; }
+    .detail-img { aspect-ratio: 4 / 3 !important; height: auto; }
+    .h1-track, .h2-track { height: 100%; }
+    .h1-slide, .h2-slide { height: 100%; }
   }
 
   .h1-slide { min-width: 100%; height: 100%; flex-shrink: 0; }
-  .h1-slide img { width: 100%; height: 100%; object-fit: cover; display: block; max-height: 100%; }
+  .h1-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .h1-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,0,0,0.3); cursor: pointer; transition: background 0.3s; }
   .h1-dot-active { background: #b8935a; }
 
   .h2-slide { min-width: 100%; height: 100%; flex-shrink: 0; }
-  .h2-slide img { width: 100%; height: 100%; object-fit: cover; display: block; max-height: 100%; }
+  .h2-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .h2-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,0,0,0.3); cursor: pointer; transition: background 0.3s; }
   .h2-dot-active { background: #b8935a; }
 </style>
