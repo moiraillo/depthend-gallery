@@ -10,15 +10,13 @@
 <meta name="keywords" content="갤러리 대관, 갤러리 대여, 서울 갤러리 대관, 서울 갤러리 대여, 졸업전시 대관, 졸업전시 장소 대관, 성수동 갤러리, 성수 갤러리 대관, 전시 공간 대관, 개인전 대관, 단체전 대관, 팝업스토어 대관, 갤러리 임대, 전시장 대관, 뎁센드, depthend gallery">
 <meta name="author" content="뎁센드 갤러리">
 <meta name="robots" content="index, follow">
-<meta name="google-site-verification" content="necchhFGITAgLJ-huproCrGTni9n_bbh4VvtzByXeos" />
-<meta name="naver-site-verification" content="3ecf32788614dfb3e80b7b3b1194f212362f8a35" />
 <link rel="canonical" href="https://depthend-gallery.vercel.app/">
 
 <!-- Open Graph (SNS 공유 최적화) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="뎁센드 갤러리 대관 | 서울 성수동 갤러리 대여 · 졸업전시 · 개인전">
-<meta property="og:description" content="서울 성수동 뎁센드 갤러리. 개인전·단체전·졸업전시·팝업 대관. 1관(11평)·2관(32평) 운영.">
-<meta property="og:url" content="https://depthend-gallery.vercel.app/">
+<meta property="og:description" content="서울 성수역 5분, 1관(11평)·2관(32평) 독립 갤러리 대관. 졸업전시, 개인전, 단체전, 팝업, 마켓, 클래스 가능. 정식 전시 확인서 발급.">
+<meta property="og:url" content="https://depthend.gallery/">
 <meta property="og:site_name" content="뎁센드 갤러리">
 <meta property="og:locale" content="ko_KR">
 
@@ -34,11 +32,11 @@
   "@graph": [
     {
       "@type": "LocalBusiness",
-      "@id": "https://depthend-gallery.vercel.app/",
+      "@id": "https://depthend.gallery/",
       "name": "뎁센드 갤러리",
       "alternateName": "Depthend Gallery",
       "description": "서울 성수동에 위치한 갤러리 대관 공간. 졸업전시, 개인전, 단체전, 팝업스토어, 마켓, 클래스 등 전시 공간이 필요한 모든 분께 열려있습니다.",
-      "url": "https://depthend-gallery.vercel.app/",
+      "url": "https://depthend.gallery/",
       "telephone": "0507-1325-3176",
       "address": [
         {
@@ -80,7 +78,7 @@
     },
     {
       "@type": "WebSite",
-      "url": "https://depthend-gallery.vercel.app/",
+      "url": "https://depthend.gallery/",
       "name": "뎁센드 갤러리",
       "inLanguage": "ko"
     },
@@ -236,14 +234,14 @@
     align-self: center;
   }
   .slider-track {
-    display: flex; height: 100%; width: 100%;
+    display: flex; height: 100%;
     transition: transform 0.8s cubic-bezier(0.77,0,0.175,1);
   }
   .slide {
-    min-width: 100%; width: 100%; height: 100%;
-    flex-shrink: 0; overflow: hidden;
+    min-width: 100%; height: 100%;
+    flex-shrink: 0;
   }
-  .slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; max-width: 100%; }
+  .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .slider-dots {
     position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
     display: flex; gap: 8px; z-index: 10;
@@ -431,38 +429,23 @@
     .amenity-grid { grid-template-columns: 1fr; }
   }
 
-  .h1-slide { min-width: 100%; width: 100%; height: 100%; flex-shrink: 0; overflow: hidden; }
-  .h1-slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; max-width: 100%; }
+  .h1-slide { min-width: 100%; height: 100%; flex-shrink: 0; }
+  .h1-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .h1-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,0,0,0.3); cursor: pointer; transition: background 0.3s; }
   .h1-dot-active { background: #b8935a; }
 
-  .h2-slide { min-width: 100%; width: 100%; height: 100%; flex-shrink: 0; overflow: hidden; }
-  .h2-slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; max-width: 100%; }
+  .h2-slide { min-width: 100%; height: 100%; flex-shrink: 0; }
+  .h2-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .h2-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,0,0,0.3); cursor: pointer; transition: background 0.3s; }
   .h2-dot-active { background: #b8935a; }
 
-  .archive-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-  .archive-item {
-    width: 100%;
-  }
-  @media (max-width: 900px) {
-    .archive-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  }
-  @media (max-width: 600px) {
-    .archive-grid { grid-template-columns: 1fr; }
-  }
-  #archive { padding: 60px 0; }
-  #archive > div { padding: 0 20px; }
-
-  .archive-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .archive-item { width: 100%; }
-  @media (max-width: 900px) { .archive-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
-  @media (max-width: 600px) { .archive-grid { grid-template-columns: 1fr; } }
+  .archive-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  .archive-item { width:100%; }
+  @media(max-width:900px){ .archive-grid{ grid-template-columns:repeat(2,1fr); gap:16px; } }
+  @media(max-width:600px){ .archive-grid{ grid-template-columns:1fr; } }
 </style>
+<meta name="google-site-verification" content="necchhFGITAgLJ-huproCrGTni9n_bbh4VvtzByXeos" />
+<meta name="naver-site-verification" content="3ecf32788614dfb3e80b7b3b1194f212362f8a35" />
 </head>
 <body>
 <nav id="top">
