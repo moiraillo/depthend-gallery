@@ -2,6 +2,10 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "routes": [
+    { "src": "/hall1", "dest": "/hall1.html" },
+    { "src": "/hall2", "dest": "/hall2.html" },
+    { "src": "/location", "dest": "/location.html" },
+    { "src": "/archive", "dest": "/archive.html" },
     {
       "src": "/robots.txt",
       "headers": { "Content-Type": "text/plain" },
