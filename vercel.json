@@ -1,4 +1,22 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/hall1",
+      "destination": "/hall1.html"
+    },
+    {
+      "source": "/hall2",
+      "destination": "/hall2.html"
+    },
+    {
+      "source": "/location",
+      "destination": "/location.html"
+    },
+    {
+      "source": "/archive",
+      "destination": "/archive.html"
+    }
+  ]
 }
