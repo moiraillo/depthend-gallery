@@ -492,86 +492,14 @@
   <div class="footer-logo"></div>
   <span>서울시 성동구 성수동 · ©2025 뎁센드 갤러리</span>
 </footer>
-
 <script>
-  let current = 0;
-  const total = 9;
-  const track = document.getElementById('sliderTrack');
-  const dotsContainer = document.getElementById('sliderDots');
-  let autoTimer;
 
-  // Create dots
-  for (let i = 0; i < total; i++) {
-    const d = document.createElement('div');
-    d.className = 'dot' + (i === 0 ? ' active' : '');
-    d.onclick = () => goTo(i);
-    dotsContainer.appendChild(d);
-  }
-
-  function goTo(n) {
-    current = (n + total) % total;
-    track.style.transform = `translateX(-${current * 100}%)`;
-    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
-    resetTimer();
-  }
-
-  function changeSlide(dir) { goTo(current + dir); }
-
-  function resetTimer() {
-    clearInterval(autoTimer);
-    autoTimer = setInterval(() => goTo(current + 1), 4000);
-  }
-
-  resetTimer();
-
-  // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   reveals.forEach(r => observer.observe(r));
-
-  // Hall1 slider
-  let h1Current = 0;
-  const h1Total = 7;
-  const h1Track = document.getElementById('h1Track');
-  let h1Timer;
-
-  function h1GoTo(n) {
-    h1Current = (n + h1Total) % h1Total;
-    h1Track.style.transform = 'translateX(-' + (h1Current * 100) + '%)';
-    document.querySelectorAll('.h1-dot').forEach((d, i) => {
-      d.style.background = i === h1Current ? '#b8935a' : 'rgba(0,0,0,0.3)';
-    });
-    clearInterval(h1Timer);
-    h1Timer = setInterval(() => h1GoTo(h1Current + 1), 4500);
-  }
-
-  function h1ChangeSlide(dir) { h1GoTo(h1Current + dir); }
-
-  h1Timer = setInterval(() => h1GoTo(h1Current + 1), 4500);
-
-  // Hall2 slider
-  let h2Current = 0;
-  const h2Total = 13;
-  const h2Track = document.getElementById('h2Track');
-  let h2Timer;
-
-  function h2GoTo(n) {
-    h2Current = (n + h2Total) % h2Total;
-    h2Track.style.transform = 'translateX(-' + (h2Current * 100) + '%)';
-    document.querySelectorAll('.h2-dot').forEach((d, i) => {
-      d.style.background = i === h2Current ? '#b8935a' : 'rgba(0,0,0,0.3)';
-    });
-    clearInterval(h2Timer);
-    h2Timer = setInterval(() => h2GoTo(h2Current + 1), 4500);
-  }
-
-  function h2ChangeSlide(dir) { h2GoTo(h2Current + dir); }
-
-  h2Timer = setInterval(() => h2GoTo(h2Current + 1), 4500);
 </script>
-
 <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
